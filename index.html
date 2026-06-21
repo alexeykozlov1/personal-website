@@ -3,124 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alexey Kozlov | QA Automation & AI Validation</title>
+  <title>Alexey Kozlov | QA Manager & AI Automation Lead</title>
+
   <style>
     * { box-sizing: border-box; scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b1020;
+      background: #050816;
       color: #e5e7eb;
+      overflow-x: hidden;
     }
+
+    .particles {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(34,211,238,.18), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(124,58,237,.18), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(14,165,233,.12), transparent 30%);
+      animation: floatBg 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBg {
+      from { transform: translateY(0); }
+      to { transform: translateY(-30px); }
+    }
+
     nav {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(11,16,32,.92);
+      background: rgba(5, 8, 22, .88);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid #1f2937;
       padding: 18px 9%;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
+    .brand {
+      color: #22d3ee;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
     nav a {
       color: #cbd5e1;
       text-decoration: none;
-      margin-left: 22px;
+      margin-left: 20px;
       font-size: 14px;
     }
-    nav a:hover, .brand { color: #22d3ee; }
-    .brand {
-      font-weight: 700;
-      font-size: 20px;
-      letter-spacing: .5px;
-    }
-    section {
-      padding: 80px 9%;
-    }
+
+    nav a:hover { color: #22d3ee; }
+
+    section { padding: 80px 9%; }
+
     .hero {
       min-height: 88vh;
       display: grid;
       grid-template-columns: 1.1fr .9fr;
-      gap: 40px;
+      gap: 50px;
       align-items: center;
     }
+
     h1 {
       font-size: 56px;
       line-height: 1.1;
       margin: 0 0 18px;
     }
+
     h2 {
       color: #22d3ee;
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
+
     h3 {
-      font-size: 30px;
+      font-size: 26px;
       margin-bottom: 10px;
     }
-    .accent { color: #22d3ee; }
+
     p {
       color: #94a3b8;
       line-height: 1.8;
       font-size: 17px;
     }
+
+    .accent { color: #22d3ee; }
+
     .btn {
       display: inline-block;
-      margin-top: 24px;
+      margin-top: 22px;
+      margin-right: 12px;
       padding: 14px 22px;
       border-radius: 10px;
-      background: linear-gradient(90deg,#0891b2,#7c3aed);
+      background: linear-gradient(90deg, #0891b2, #7c3aed);
       color: white;
       text-decoration: none;
       font-weight: 700;
     }
-    .hero-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.hero-photo img {
-  width: 340px;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #22d3ee;
-  box-shadow: 0 20px 60px rgba(34, 211, 238, 0.25);
-  transition: transform 0.3s ease;
-}
-
-.hero-photo img:hover {
-  transform: scale(1.03);
-}
-    pre {
-      white-space: pre-wrap;
-      color: #a7f3d0;
-      font-size: 15px;
-      line-height: 1.7;
-      margin: 0;
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #22d3ee;
+      color: #22d3ee;
     }
-    .grid {
+
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-photo img {
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #22d3ee;
+      box-shadow: 0 20px 80px rgba(34, 211, 238, .28);
+    }
+
+    .stats, .projects {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
+      margin-top: 40px;
     }
-    .timeline {
-      max-width: 900px;
-      margin: auto;
+
+    .stat-card, .card, .job-card {
+      background: rgba(17, 24, 39, .86);
+      border: 1px solid #243041;
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
     }
-    .job {
-      margin-bottom: 24px;
-      border-left: 3px solid #22d3ee;
-      padding-left: 22px;
+
+    .stat-card h3 {
+      color: #22d3ee;
+      font-size: 34px;
+      margin: 0;
     }
+
+    .timeline { max-width: 1050px; }
+
+    .job-card {
+      margin-bottom: 22px;
+      border-left: 4px solid #22d3ee;
+    }
+
     .date {
       color: #a78bfa;
       font-size: 14px;
+      margin-bottom: 8px;
     }
+
     .skills span {
       display: inline-block;
       margin: 8px;
@@ -130,21 +172,35 @@
       border-radius: 999px;
       color: #cbd5e1;
     }
+
+    .project-img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid #243041;
+      background: #0f172a;
+    }
+
     footer {
       text-align: center;
       padding: 35px;
       color: #64748b;
       border-top: 1px solid #1f2937;
     }
-    @media(max-width: 850px) {
-      .hero, .grid { grid-template-columns: 1fr; }
+
+    @media(max-width: 900px) {
+      .hero, .stats, .projects { grid-template-columns: 1fr; }
       h1 { font-size: 40px; }
-      nav { flex-direction: column; gap: 14px; }
+      nav { flex-direction: column; gap: 12px; }
       nav a { margin: 0 8px; }
     }
   </style>
 </head>
+
 <body>
+
+<div class="particles"></div>
 
 <nav>
   <div class="brand">ALEXEY KOZLOV</div>
@@ -160,101 +216,181 @@
 <section class="hero">
   <div>
     <h1>Hello,<br>This is <span class="accent">Alexey Kozlov</span></h1>
-    <p>I am a QA Automation Manager and Test Automation Architect focused on healthcare software, AI validation, Playwright automation, CI/CD quality gates, and scalable QA processes.</p>
+
+    <p>
+      QA Manager, Quality Engineering Leader, and AI Automation Lead with 10+ years of experience across healthcare, aviation, finance, and education technology platforms.
+    </p>
+
     <a class="btn" href="#contact">Contact Me</a>
-
-<div style="margin-top:25px;">
-  <a href="https://www.linkedin.com/in/alexey-k-b14779a8/"
-     target="_blank"
-     style="color:#22d3ee;text-decoration:none;margin-right:20px;">
-     LinkedIn
+    <p>
+  <a href="resume.pdf" target="_blank" style="color:#22d3ee;">
+    View Resume (PDF)
   </a>
+</p>
 
-  <a href="https://github.com/alexeykozlov1"
-     target="_blank"
-     style="color:#22d3ee;text-decoration:none;">
-     GitHub
-  </a>
-</div>
+    <div class="stats">
+      <div class="stat-card">
+        <h3>10+</h3>
+        <p>Years in Quality Engineering</p>
+      </div>
+      <div class="stat-card">
+        <h3>16+</h3>
+        <p>QA Engineers Led</p>
+      </div>
+      <div class="stat-card">
+        <h3>AI</h3>
+        <p>Automation & LLM Evaluation</p>
+      </div>
+    </div>
   </div>
 
   <div class="hero-photo">
-  <img src="profile.jpg" alt="Alexey Kozlov">
-</div>
+    <img src="profile.jpg" alt="Alexey Kozlov">
+  </div>
 </section>
 
 <section id="about">
-  <h2>ABOUT ME</h2>
-  <h3>Who I am?</h3>
-  <p>I am a QA leader with hands-on automation experience and a strong focus on building reliable validation processes for complex healthcare and enterprise platforms. I work across automation strategy, regression coverage, CI/CD testing, AI validation, release readiness, team leadership, and quality metrics.</p>
+  <h2>About Me</h2>
+  <h3>Quality Engineering, Automation, and AI Validation</h3>
+  <p>
+    I lead QA organizations, build automation frameworks, improve release readiness, and create AI-driven testing strategies. My experience includes Playwright, Selenium, Cypress, Appium, REST API testing, CI/CD pipelines, RAG evaluation, LLM benchmarking, AI agents, and healthcare SaaS validation.
+  </p>
 </section>
 
 <section id="experience">
-  <h2>EXPERIENCE</h2>
+  <h2>Experience</h2>
+
   <div class="timeline">
-    <div class="job">
+    <div class="job-card">
       <div class="date">Mar 2025 - Present</div>
-      <h3>QA Manager</h3>
-      <p>DocNow / DoctorNow AI. Leading QA strategy, automation validation, healthcare platform testing, AI feature validation, release readiness, and QA team operations.</p>
+      <h3>QA Manager / AI Automation Lead | DocNow.ai</h3>
+      <p>
+        Leading distributed QA operations for healthcare SaaS and AI-driven clinical applications. Managing release readiness, regression strategy, defect triage, test planning, and quality governance. Building AI automation with AutoGen, MCP, Playwright, Python, OpenAI, LangChain, RAGAS, and multi-agent systems.
+      </p>
     </div>
-    <div class="job">
-      <div class="date">2017 - 2025</div>
-      <h3>QA Automation / Test Engineering</h3>
-      <p>Enterprise software validation with experience across automation frameworks, API testing, regression planning, release testing, and CI/CD quality gates.</p>
+
+    <div class="job-card">
+      <div class="date">Jan 2025 - Mar 2025</div>
+      <h3>Lead QA Automation Engineer | Southwest Airlines</h3>
+      <p>
+        Directed QA initiatives for aviation simulation and pilot training platforms. Scaled Playwright and API automation frameworks, reduced regression time by more than 60%, and supported CI/CD release validation for mission-critical aviation systems.
+      </p>
     </div>
-    <div class="job">
-      <div class="date">Previous Experience</div>
-      <h3>Cloud Testing & Validation</h3>
-      <p>Worked with engineering teams on cloud testing, software validation, automation strategy, and quality process improvements.</p>
+
+    <div class="job-card">
+      <div class="date">May 2023 - Jan 2025</div>
+      <h3>Principal Quality Assurance Engineer | Stride Inc</h3>
+      <p>
+        Led QA transformation for large-scale education technology platforms. Reduced regression effort by more than 50% through Playwright and API automation integrated into CI/CD pipelines.
+      </p>
+    </div>
+
+    <div class="job-card">
+      <div class="date">Oct 2021 - Apr 2023</div>
+      <h3>Lead Software QA Engineer | Bravado Health</h3>
+      <p>
+        Managed QA operations for cloud-based healthcare and patient management platforms. Built Cypress UI automation, Java REST Assured API automation, AWS-based QA solutions, and CI/CD validation pipelines.
+      </p>
+    </div>
+
+    <div class="job-card">
+      <div class="date">Nov 2017 - Sep 2021</div>
+      <h3>Test Lead / Senior QA Engineer | Mindtree LTD</h3>
+      <p>
+        Led QA delivery for Equifax and Delta Air Lines projects. Designed Selenium, Rest Assured, Java, Appium, Cucumber, Postman, SoapUI, SQL, and AWS-based automation solutions for enterprise financial and aviation systems.
+      </p>
     </div>
   </div>
 </section>
 
 <section id="skills">
-  <h2>SKILLS</h2>
+  <h2>Skills</h2>
+
   <div class="skills">
+    <span>QA Management</span>
+    <span>Quality Strategy</span>
+    <span>Release Management</span>
+    <span>Risk Management</span>
     <span>Playwright</span>
     <span>Selenium</span>
-    <span>JavaScript</span>
+    <span>Cypress</span>
+    <span>Appium</span>
+    <span>Java</span>
     <span>TypeScript</span>
+    <span>JavaScript</span>
     <span>Python</span>
-    <span>API Testing</span>
-    <span>CI/CD</span>
+    <span>SQL</span>
+    <span>REST API Testing</span>
+    <span>SOAP Testing</span>
+    <span>Postman</span>
+    <span>Rest Assured</span>
+    <span>BDD</span>
+    <span>Cucumber</span>
+    <span>PyTest</span>
     <span>GitHub Actions</span>
-    <span>BrowserStack</span>
+    <span>Jenkins</span>
+    <span>GitLab CI</span>
+    <span>AWS</span>
+    <span>Azure</span>
+    <span>Jira</span>
+    <span>Confluence</span>
     <span>Testmo</span>
-    <span>Vertex AI</span>
-    <span>AI Validation</span>
-    <span>Healthcare QA</span>
-    <span>Release Validation</span>
-    <span>Team Leadership</span>
+    <span>BrowserStack</span>
+    <span>AI Assisted Testing</span>
+    <span>AI Agents</span>
+    <span>AutoGen</span>
+    <span>MCP</span>
+    <span>Prompt Engineering</span>
+    <span>LangChain</span>
+    <span>RAG</span>
+    <span>RAGAS</span>
+    <span>LLM Evaluation</span>
   </div>
 </section>
 
 <section id="projects">
-  <h2>PROJECTS</h2>
-  <div class="grid">
+  <h2>Projects</h2>
+
+  <div class="projects">
     <div class="card">
-      <h3>AI Release Notes Automation</h3>
-      <p>Automated workflow concept for generating customer-facing release notes using commits, screenshots, videos, QA validation, and publishing tools.</p>
+      <img class="project-img" src="project-1.jpg" alt="AI Automation and Agent Systems">
+      <h3>AI Automation & Agent Systems</h3>
+      <p>
+        Built autonomous multi-agent systems using Database Agents, API Agents, Browser Automation Agents, Excel Agents, SelectorGroupChat, and MultimodalWebSurfer patterns.
+      </p>
     </div>
+
     <div class="card">
-      <h3>Playwright Automation Framework</h3>
-      <p>Reliable UI automation strategy using reusable login helpers, role-based selectors, deterministic waits, assertions, and CI integration.</p>
+      <img class="project-img" src="project-2.jpg" alt="LLM and RAG Evaluation Framework">
+      <h3>LLM & RAG Evaluation Framework</h3>
+      <p>
+        Designed automated AI quality evaluation using Python, PyTest, LangChain, and RAGAS with metrics for faithfulness, context precision, context recall, response relevance, and factual correctness.
+      </p>
     </div>
+
     <div class="card">
-      <h3>Healthcare Regression Strategy</h3>
-      <p>Structured regression coverage across healthcare modules, release validation, defect tracking, and QA readiness reporting.</p>
+      <img class="project-img" src="project-3.jpg" alt="Enterprise Automation Frameworks">
+      <h3>Enterprise Automation Frameworks</h3>
+      <p>
+        Scaled Playwright, Selenium, Cypress, Appium, API, and CI/CD automation frameworks across healthcare, aviation, finance, and education technology platforms.
+      </p>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>CONTACT</h2>
-  <h3>Contact with me</h3>
-  <p>I am open to QA Automation, Test Architect, AI Validation, and QA Leadership opportunities.</p>
+  <h2>Contact</h2>
+  <h3>Let’s connect</h3>
+
+  <p>
+    I am open to QA Manager, Quality Engineering Leader, Test Automation Architect, AI Automation Lead, and AI Validation opportunities.
+  </p>
+
   <p>Email: alexeymspm@gmail.com</p>
+  <p>Phone: 813-819-6803</p>
   <p>GitHub: github.com/alexeykozlov1</p>
+  <p>LinkedIn: linkedin.com/in/alexeykozlov</p>
+  <p>Location: Greater Tampa Bay Area</p>
 </section>
 
 <footer>
