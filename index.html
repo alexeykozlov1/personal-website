@@ -17,8 +17,8 @@
     .hero{min-height:88vh;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
     h1{font-size:56px;line-height:1.1;margin:0 0 18px}
     h2{color:#22d3ee;text-transform:uppercase;letter-spacing:2px;font-size:18px;margin-bottom:25px}
-    h3{font-size:26px;margin-bottom:10px}
-    p{color:#94a3b8;line-height:1.8;font-size:17px}
+    h3{font-size:24px;margin-bottom:10px}
+    p,li{color:#94a3b8;line-height:1.75;font-size:16px}
     .accent{color:#22d3ee}
     .btn{display:inline-block;margin-top:22px;margin-right:12px;padding:14px 22px;border-radius:10px;background:linear-gradient(90deg,#0891b2,#7c3aed);color:white;text-decoration:none;font-weight:700}
     .btn-outline{background:transparent;border:1px solid #22d3ee;color:#22d3ee}
@@ -27,9 +27,10 @@
     .stats,.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
     .stat-card,.card,.job-card,.tool-card{background:rgba(17,24,39,.86);border:1px solid #243041;border-radius:18px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
     .stat-card h3{color:#22d3ee;font-size:34px;margin:0}
-    .timeline{max-width:1050px}
-    .job-card{margin-bottom:22px;border-left:4px solid #22d3ee}
-    .date{color:#a78bfa;font-size:14px;margin-bottom:8px}
+    .timeline{max-width:1150px}
+    .job-card{margin-bottom:26px;border-left:4px solid #22d3ee}
+    .job-head{display:flex;align-items:center;gap:16px;margin-bottom:10px}
+    .company-logo{width:54px;height:54px;border-radius:12px;background:white;object-fit:contain;padding:7px}
     .skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:20px}
     .tool-card{text-align:center;transition:.3s}
     .tool-card:hover{transform:translateY(-5px);border-color:#22d3ee}
@@ -37,7 +38,7 @@
     .tool-card span{display:block;color:white;font-size:14px}
     .project-img{width:100%;height:170px;object-fit:cover;border-radius:14px;border:1px solid #243041;background:#0f172a}
     footer{text-align:center;padding:35px;color:#64748b;border-top:1px solid #1f2937}
-    @media(max-width:900px){.hero,.stats,.projects{grid-template-columns:1fr}h1{font-size:40px}nav{flex-direction:column;gap:12px}nav a{margin:0 8px}}
+    @media(max-width:900px){.hero,.stats,.projects{grid-template-columns:1fr}h1{font-size:40px}nav{flex-direction:column;gap:12px}nav a{margin:0 8px}.job-head{align-items:flex-start}}
   </style>
 </head>
 
@@ -58,15 +59,15 @@
 <section class="hero">
   <div>
     <h1>Hello,<br>This is <span class="accent">Alex Grant</span></h1>
-    <p>QA Manager, Quality Engineering Leader, and AI Automation Lead with 10+ years of experience across healthcare, aviation, finance, and education technology platforms.</p>
+    <p>Quality Engineering Leader, QA Manager, and AI Automation Lead with 10+ years of experience leading software quality initiatives across healthcare, aviation, finance, and education technology platforms.</p>
     <a class="btn" href="resume.pdf" target="_blank">Resume</a>
     <a class="btn btn-outline" href="https://www.linkedin.com/in/alexey-k-b14779a8/" target="_blank">LinkedIn</a>
     <a class="btn btn-outline" href="https://github.com/alexeykozlov1" target="_blank">GitHub</a>
 
     <div class="stats">
       <div class="stat-card"><h3>10+</h3><p>Years in Quality Engineering</p></div>
-      <div class="stat-card"><h3>16+</h3><p>QA Engineers Led</p></div>
       <div class="stat-card"><h3>AI</h3><p>Automation & LLM Evaluation</p></div>
+      <div class="stat-card"><h3>QA</h3><p>Leadership & Release Governance</p></div>
     </div>
   </div>
 
@@ -78,17 +79,155 @@
 <section id="about">
   <h2>About Me</h2>
   <h3>Quality Engineering, Automation, and AI Validation</h3>
-  <p>I lead QA organizations, build automation frameworks, improve release readiness, and create AI-driven testing strategies. My experience includes Playwright, Selenium, Cypress, Appium, REST API testing, CI/CD pipelines, RAG evaluation, LLM benchmarking, AI agents, and healthcare SaaS validation.</p>
+  <p>Proven track record of scaling QA organizations, reducing regression effort through automation, improving release quality, and accelerating delivery through CI/CD and AI driven testing strategies. Experienced managing distributed QA teams, driving enterprise release readiness, implementing automation frameworks, AI quality engineering practices, RAG evaluation frameworks, and autonomous AI agent technologies to improve engineering efficiency and business outcomes.</p>
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
+
   <div class="timeline">
-    <div class="job-card"><div class="date">Mar 2025 - Present</div><h3>QA Manager / AI Automation Lead | DocNow.ai</h3><p>Leading distributed QA operations for healthcare SaaS and AI-driven clinical applications. Managing release readiness, regression strategy, defect triage, test planning, and quality governance. Building AI automation with AutoGen, MCP, Playwright, Python, OpenAI, LangChain, RAGAS, and multi-agent systems.</p></div>
-    <div class="job-card"><div class="date">Jan 2025 - Mar 2025</div><h3>Lead QA Automation Engineer | Southwest Airlines</h3><p>Directed QA initiatives for aviation simulation and pilot training platforms. Scaled Playwright and API automation frameworks, reduced regression time by more than 60%, and supported CI/CD release validation.</p></div>
-    <div class="job-card"><div class="date">May 2023 - Jan 2025</div><h3>Principal Quality Assurance Engineer | Stride Inc</h3><p>Led QA transformation for large-scale education technology platforms. Reduced regression effort by more than 50% through Playwright and API automation integrated into CI/CD pipelines.</p></div>
-    <div class="job-card"><div class="date">Oct 2021 - Apr 2023</div><h3>Lead Software QA Engineer | Bravado Health</h3><p>Managed QA operations for cloud-based healthcare and patient management platforms. Built Cypress UI automation, Java REST Assured API automation, AWS-based QA solutions, and CI/CD validation pipelines.</p></div>
-    <div class="job-card"><div class="date">Nov 2017 - Sep 2021</div><h3>Test Lead / Senior QA Engineer | Mindtree LTD</h3><p>Led QA delivery for Equifax and Delta Air Lines projects. Designed Selenium, Rest Assured, Java, Appium, Cucumber, Postman, SoapUI, SQL, and AWS-based automation solutions.</p></div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/docnow.ai" alt="DocNow.ai logo">
+        <h3>QA Manager / AI Automation Lead | DocNow.ai</h3>
+      </div>
+      <ul>
+        <li>Lead a distributed QA organization supporting healthcare SaaS products, AI driven clinical applications, and enterprise release management activities</li>
+        <li>Manage release readiness, regression strategy, defect triage, test planning, and quality governance across multiple Agile teams</li>
+        <li>Designed and implemented AI powered automation solutions using AutoGen, MCP, Playwright, Python, and OpenAI technologies</li>
+        <li>Built autonomous multi agent systems utilizing Database Agents, API Agents, Browser Automation Agents, and Excel Agents for workflow automation</li>
+        <li>Established AI automation standards and reusable agent architectures supporting scalable adoption across QA operations</li>
+        <li>Designed and implemented automated evaluation frameworks for AI and RAG based applications using Python, PyTest, LangChain, and RAGAS</li>
+        <li>Established quality benchmarks for AI systems including Faithfulness, Context Precision, Context Recall, Response Relevance, and Factual Correctness metrics</li>
+        <li>Developed reusable LLM evaluation datasets and automated scoring frameworks to measure AI response quality and retrieval effectiveness</li>
+        <li>Built evaluation pipelines supporting conversational AI validation, multi turn interactions, and retrieval augmented generation architectures</li>
+        <li>Implemented rubric based AI quality assessment and automated reporting supporting continuous improvement of AI driven healthcare applications</li>
+        <li>Developed AI driven Jira workflow automation and reporting solutions improving operational efficiency</li>
+        <li>Implemented advanced agent orchestration patterns including SelectorGroupChat and MultimodalWebSurfer for intelligent web navigation and task execution</li>
+        <li>Provided executive level quality reporting, release readiness assessments, and risk analysis to leadership teams</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/southwest.com" alt="Southwest Airlines logo">
+        <h3>Lead QA Automation Engineer | Southwest Airlines</h3>
+      </div>
+      <ul>
+        <li>Directed QA initiatives for pilot training and aviation simulation platforms supporting enterprise airline operations and multiple Agile delivery teams</li>
+        <li>Reduced manual test design effort by approximately 40% through implementation of AI assisted testing workflows and intelligent validation strategies</li>
+        <li>Scaled Playwright and API automation frameworks supporting complex simulation workflows, reducing regression execution time by more than 60%</li>
+        <li>Accelerated deployment readiness and reduced release risks through automated validation integrated into CI/CD pipelines</li>
+        <li>Coordinated testing activities, defect prioritization, and release readiness across multiple Agile teams</li>
+        <li>Managed QA planning, sprint testing priorities, and automation efforts for mission critical aviation systems</li>
+        <li>Mentored QA engineers on automation frameworks, quality engineering standards, and AI assisted testing practices</li>
+        <li>Delivered executive level quality metrics, release readiness reporting, and risk assessments supporting production deployment decisions</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/stridelearning.com" alt="Stride Inc logo">
+        <h3>Principal Quality Assurance Engineer | Stride Inc</h3>
+      </div>
+      <ul>
+        <li>Spearheaded QA transformation initiatives for large scale education technology platforms supporting thousands of users</li>
+        <li>Reduced regression testing effort by more than 50% through Playwright and API automation frameworks integrated into CI/CD pipelines</li>
+        <li>Accelerated release validation workflows by introducing AI assisted testing and intelligent automation strategies</li>
+        <li>Improved deployment confidence through continuous testing and automation governance practices</li>
+        <li>Guided QA engineers on framework development, automation strategy, and quality engineering best practices</li>
+        <li>Collaborated with Product, Engineering, and DevOps leadership to align quality strategy with business objectives</li>
+        <li>Increased defect detection rates through risk based testing methodologies and automation expansion</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/bravadohealth.com" alt="Bravado Health logo">
+        <h3>Lead Software QA Engineer | Bravado Health</h3>
+      </div>
+      <ul>
+        <li>Managed QA operations for cloud based healthcare and patient management platforms</li>
+        <li>Architected AWS based automation solutions improving testing efficiency and reducing manual validation activities</li>
+        <li>Accelerated release cycles through implementation of CI/CD QA pipelines</li>
+        <li>Developed UI automation frameworks using Cypress and API automation frameworks using Java and Rest Assured</li>
+        <li>Coordinated functional, API, integration, regression, and database testing across enterprise healthcare applications</li>
+        <li>Improved collaboration between QA, Product, and Engineering through BDD and ATDD practices</li>
+        <li>Managed offshore QA coordination, sprint testing allocation, and release validation activities</li>
+        <li>Maintained defect management, release traceability, and QA reporting processes using Jira and Confluence</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/equifax.com" alt="Equifax logo">
+        <h3>Test Lead | Mindtree LTD | Project: Equifax</h3>
+      </div>
+      <ul>
+        <li>Led QA delivery for enterprise scale financial and credit reporting systems supporting millions of users</li>
+        <li>Reduced regression execution time through automation frameworks integrated into CI/CD pipelines</li>
+        <li>Expanded mobile testing coverage through Appium automation solutions</li>
+        <li>Designed automation frameworks using Selenium, Rest Assured, and Java</li>
+        <li>Improved release transparency through Allure reporting dashboards and quality metrics</li>
+        <li>Coordinated testing activities across distributed QA teams supporting multiple enterprise releases</li>
+        <li>Managed Jira workflows, defect prioritization, release tracking, and QA documentation</li>
+        <li>Collaborated with engineering leadership and business stakeholders to improve software quality and operational efficiency</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/delta.com" alt="Delta Air Lines logo">
+        <h3>Senior Quality Assurance Engineer | Mindtree LTD | Project: Delta Air Lines</h3>
+      </div>
+      <ul>
+        <li>Designed AWS based automation architecture for enterprise airline systems and customer facing applications</li>
+        <li>Performed API testing using Postman and SoapUI combined with backend SQL validation</li>
+        <li>Expanded regression coverage through BDD automation frameworks using Cucumber and Java</li>
+        <li>Accelerated issue resolution through Jira driven defect lifecycle management</li>
+        <li>Supported enterprise integration testing initiatives across aviation systems and backend services</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/northeastern.edu" alt="Northeastern University logo">
+        <h3>QA Engineer | Northeastern University Internship</h3>
+      </div>
+      <ul>
+        <li>Selenium automation</li>
+        <li>Regression testing</li>
+        <li>Performance optimization</li>
+        <li>Quality improvements</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/savethewater.org" alt="Save the Water logo">
+        <h3>Quality Engineer | Save the Water Internship</h3>
+      </div>
+      <ul>
+        <li>Selenium automation</li>
+        <li>Test execution</li>
+        <li>Quality assurance</li>
+        <li>Process improvements</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <div class="job-head">
+        <img class="company-logo" src="https://logo.clearbit.com/bhcc.edu" alt="Bunker Hill Community College logo">
+        <h3>Library Assistant | Bunker Hill Community College Library</h3>
+      </div>
+      <ul>
+        <li>Web content management</li>
+        <li>UX improvements</li>
+        <li>Digital content organization</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -98,13 +237,15 @@
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright"><span>Playwright</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium"><span>Selenium</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" alt="Cypress"><span>Cypress</span></div>
-    <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/appium/appium-original.svg" alt="Appium"><span>Appium</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/appium/4726E1" alt="Appium"><span>Appium</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span>TypeScript</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytest/pytest-original.svg" alt="PyTest"><span>PyTest</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman"><span>Postman</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/soapui/6CB33F" alt="SoapUI"><span>SoapUI</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/cucumber/23D96C" alt="Cucumber"><span>Cucumber</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions"><span>GitHub Actions</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins"><span>Jenkins</span></div>
@@ -114,7 +255,9 @@
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="Jira"><span>Jira</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/confluence/confluence-original.svg" alt="Confluence"><span>Confluence</span></div>
     <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/browserstack/browserstack-original.svg" alt="BrowserStack"><span>BrowserStack</span></div>
-    <div class="tool-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg" alt="OpenAI"><span>OpenAI</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/openai/FFFFFF" alt="OpenAI"><span>OpenAI</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/langchain/1C3C3C" alt="LangChain"><span>LangChain</span></div>
+    <div class="tool-card"><img src="https://cdn.simpleicons.org/pytest/0A9EDC" alt="RAGAS"><span>RAGAS</span></div>
   </div>
 </section>
 
